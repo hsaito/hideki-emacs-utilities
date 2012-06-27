@@ -17,8 +17,10 @@
 ;; 
 ;; Install:
 ;; Add the following to .emacs
-;; (autoload 'anti-space-invader "anti-space-invader" "Anti Space Invader" t)
+;; (require 'anti-space-invader)
 ;;
+
+(provide 'anti-space-invader)
 
 (defun anti-space-invader()
   "Eradicate two spaces after period and replace with single space."

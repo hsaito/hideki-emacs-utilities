@@ -21,7 +21,7 @@
   (setq socks-noproxy nil)
   (setq socks-override-funcions nil)
   (setq erc-server-connect-function 'open-network-stream)
-)
+  )
 
 (defun erc-through-proxy()
   "Setup local proxy and connect to IRC"
@@ -35,4 +35,4 @@
   (interactive)
   (unsetup-localproxy)
   (erc)
-)
+  )

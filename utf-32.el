@@ -1,6 +1,20 @@
-;; Emacs 23用UTF-32
+;; UTF-32 support for Emacs
+;;
+;; Original code by:
+;; http://albinina.sakura.ne.jp/
+;;
+;; Modifications:
+;; - Changed name of each coding system so it is consistent with the rest.
+;; 
+;; Modified by Hideki Saito <hidekis@gmail.com>
+;; 
+;; Installation:
+;; (require 'utf-32)
+;;
 
-;; BOMあり版
+;;
+;; With BOM
+;;
 
 (defun utf-32-be-unix-pre-write-conversion (from to)
   (set-buffer-multibyte t)
@@ -156,7 +170,7 @@
   (goto-char 0)
   len)
 
-;; BOMなし版
+;; Without BOM
 
 (defun utf-32be-unix-pre-write-conversion (from to)
   (set-buffer-multibyte t)
@@ -276,9 +290,9 @@
   (goto-char 0)
   len)
 
-;; BOMあり版
+;; With BOM
 
-(define-coding-system 'utf-32-be-unix
+(define-coding-system 'utf-32be-with-signature-unix
   "UTF-32 (big endian)"
   :coding-type 'utf-16
   :mnemonic ?U
@@ -287,7 +301,7 @@
   :pre-write-conversion 'utf-32-be-unix-pre-write-conversion
   :post-read-conversion 'utf-32-be-unix-post-read-conversion)
 
-(define-coding-system 'utf-32-be-dos
+(define-coding-system 'utf-32be-with-signature-dos
   "UTF-32 (big endian)"
   :coding-type 'utf-16
   :mnemonic ?U
@@ -296,7 +310,7 @@
   :pre-write-conversion 'utf-32-be-dos-pre-write-conversion
   :post-read-conversion 'utf-32-be-dos-post-read-conversion)
 
-(define-coding-system 'utf-32-be-mac
+(define-coding-system 'utf-32be-with-signature-mac
   "UTF-32 (big endian)"
   :coding-type 'utf-16
   :mnemonic ?U
@@ -305,7 +319,7 @@
   :pre-write-conversion 'utf-32-be-unix-pre-write-conversion
   :post-read-conversion 'utf-32-be-unix-post-read-conversion)
 
-(define-coding-system 'utf-32-le-unix
+(define-coding-system 'utf-32le-with-signature-unix
   "UTF-32 (little endian)"
   :coding-type 'utf-16
   :endian 'little
@@ -315,7 +329,7 @@
   :pre-write-conversion 'utf-32-le-unix-pre-write-conversion
   :post-read-conversion 'utf-32-le-unix-post-read-conversion)
 
-(define-coding-system 'utf-32-le-dos
+(define-coding-system 'utf-32le-with-signature-dos
   "UTF-32 (little endian)"
   :coding-type 'utf-16
   :endian 'little
@@ -325,7 +339,7 @@
   :pre-write-conversion 'utf-32-le-dos-pre-write-conversion
   :post-read-conversion 'utf-32-le-dos-post-read-conversion)
 
-(define-coding-system 'utf-32-le-mac
+(define-coding-system 'utf-32le-with-signature-mac
   "UTF-32 (little endian)"
   :coding-type 'utf-16
   :endian 'little
@@ -335,7 +349,7 @@
   :pre-write-conversion 'utf-32-le-unix-pre-write-conversion
   :post-read-conversion 'utf-32-le-unix-post-read-conversion)
 
-;; BOMなし版
+;; Without BOM
 
 (define-coding-system 'utf-32be-unix
   "UTF-32 (big endian)"

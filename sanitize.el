@@ -12,8 +12,10 @@
 ;;
 ;; Install:
 ;; Add the following to .emacs
-;; (autoload 'sanitize-buffer "sanitize" "Sanitize Script" t)
+;; (require 'sanitize)
 ;;
+
+(provide 'sanitize)
 
 (defun sanitize-buffer ()
   "Sanitize buffer for certain proprietary CMS system."
