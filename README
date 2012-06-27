@@ -1,0 +1,10 @@
+Simple set of utilities for Emacs
+
+Please read each elisp file for details.
+
+anti-space-invader.el	    Removed extra spaces after period
+create-random-buffer.el	    Creates random buffer or tempfile
+erc-proxy.el		    A simple script to setup IRC through proxy
+org-mode-aux.el		    A simple script to set validation link
+sanitize.el		    Remove some abnormal characters from strings
+utf-32.el		    UTF-32 support
