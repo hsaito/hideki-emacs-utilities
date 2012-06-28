@@ -18,7 +18,6 @@
 ;;
 
 (provide 'create-random-buffer)
-(provide 'create-random-tempfile)
 
 (defun create-random-buffer ()
   "Creates an empty buffer with random name."

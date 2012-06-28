@@ -1,5 +1,8 @@
+;; -*- coding: utf-8; lexical-binding: t -*-
 ;; Script for Setting Up Connection to IRC Through Proxy Using ERC
 ;; Personally intended for SOCKS proxy established by SSH.
+
+(provide 'erc-proxy)
 
 (defun setup-localproxy()
   "Setup Emacs for using local SOCKS proxy for ERC"
@@ -9,7 +12,10 @@
   (setq socks-noproxy '("localhost"))
   (setq socks-override-functions 1)
   (setq erc-server-connect-function 'socks-open-network-stream)
-  
+
+  (message erc-proxy-port)
+  (message erc-proxy-host)
+
   ;; ssh port number for dynamic forwarding
   (setq socks-server '("ssh" "localhost" 24123 5)))
 

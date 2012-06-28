@@ -1,0 +1,14 @@
+;; -*- coding: utf-8; mode: emacs-lisp; lexical-binding: t -*-
+
+(setq HEU-files-to-compile (directory-files "."))
+
+(while HEU-files-to-compile
+  (if (string-match ".$*.el$" (car HEU-files-to-compile))
+      (progn
+	(byte-compile-file (car HEU-files-to-compile))
+	)
+    (message "Compiled!")
+    )
+  (setq HEU-files-to-compile (cdr HEU-files-to-compile))
+  (message (car HEU-files-to-compile))
+  )
