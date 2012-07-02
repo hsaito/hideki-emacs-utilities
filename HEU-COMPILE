@@ -13,6 +13,9 @@
 		  (message (car files-to-compile))
 		  )
 	  )
+	;; As thsi won't compile unless it is previously loaded
+	;; (which happens when it gets byte-compiled)
+	(byte-compile-file("HEU_loader.el"))
 	)
     )
   )
