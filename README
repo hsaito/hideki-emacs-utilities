@@ -2,9 +2,17 @@ Simple set of utilities for Emacs
 
 Please read each elisp file for details.
 
+* Contents
 anti-space-invader.el	    Removed extra spaces after period
 create-random-buffer.el	    Creates random buffer or tempfile
 erc-proxy.el		    A simple script to setup IRC through proxy
 org-mode-aux.el		    A simple script to set validation link
 sanitize.el		    Remove some abnormal characters from strings
 utf-32.el		    UTF-32 support
+
+* How to install
+1. Place the package in one of your load-path 
+2. (OPTIONAL) Navigate to it using dired, select HEU-COMPILE and enter L and load the script. It'll byte-compile the distribution.
+3. Add the following to your Emacs initialization file.
+
+(load-library "HEU_loader.el")

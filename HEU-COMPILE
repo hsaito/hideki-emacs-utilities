@@ -1,22 +1,18 @@
 ;; -*- coding: utf-8; mode: emacs-lisp; lexical-binding: t -*-
 
-(defun HEU-byte-compile ()
-  (let ((files-to-compile (directory-files "."))
-	(lambda (while files-to-compile
-		  (if (string-match ".$*.el$" (car files-to-compile))
-		      (progn
-			(byte-compile-file (car files-to-compile))
-			)
-		    (message "Compiled!")
-		    )
-		  (setq files-to-compile (cdr files-to-compile))
-		  (message (car files-to-compile))
-		  )
-	  )
-	;; As thsi won't compile unless it is previously loaded
-	;; (which happens when it gets byte-compiled)
-	(byte-compile-file("HEU_loader.el"))
-	)
-    )
-  )
+(setq HEU-files-to-compile (directory-files "."))
 
+(while HEU-files-to-compile
+  (if (string-match ".$*.el$" (car HEU-files-to-compile))
+    (progn
+     (byte-compile-file (car HEU-files-to-compile))
+     )
+      (message "Compiled!")
+      )
+     (setq HEU-files-to-compile (cdr HEU-files-to-compile))
+     (message (car HEU-files-to-compile))
+     )
+
+;; Lastly compiled HEU_loader as it can fail if this is first
+;; time compiling.
+(byte-compile "HEU_loader.el")
