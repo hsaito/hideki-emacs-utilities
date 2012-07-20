@@ -22,7 +22,7 @@
 (defun create-random-buffer ()
   "Creates an empty buffer with random name."
   (interactive)
-  (switch-to-buffer (concat "*" (concat (sha1 (number-to-string (random))) "*")))
+  (switch-to-buffer (concat "*temp-" (concat (sha1 (number-to-string (random))) "*")))
   )
 
 (setq random-tempfile-default-directory "~/")
