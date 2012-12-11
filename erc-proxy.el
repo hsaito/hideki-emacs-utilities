@@ -14,7 +14,8 @@
   (setq erc-server-connect-function 'socks-open-network-stream)
 
   ;; ssh port number for dynamic forwarding
-  (setq socks-server '("ssh" "localhost" 24123 5)))
+  (setq socks-server (list "SSH Local" "localhost" 24123 5))
+  )
 
 (defun unsetup-localproxy()
   "Unsetup Emacs for using local SOCKS proxy for ERC"
