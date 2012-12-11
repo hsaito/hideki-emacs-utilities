@@ -13,9 +13,6 @@
   (setq socks-override-functions 1)
   (setq erc-server-connect-function 'socks-open-network-stream)
 
-  (message erc-proxy-port)
-  (message erc-proxy-host)
-
   ;; ssh port number for dynamic forwarding
   (setq socks-server '("ssh" "localhost" 24123 5)))
 
