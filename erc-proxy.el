@@ -1,8 +1,11 @@
-;; -*- coding: utf-8; lexical-binding: t -*-
+;;; erc-proxy.el --- Scripts for setting up connection to IRC through proxy using ERC
+
+;;; Commentary:
+;; 
 ;; Script for Setting Up Connection to IRC Through Proxy Using ERC
 ;; Personally intended for SOCKS proxy established by SSH.
 
-(provide 'erc-proxy)
+;;; Code:
 
 (defun setup-localproxy()
   "Setup Emacs for using local SOCKS proxy for ERC"
@@ -40,3 +43,7 @@
   (unsetup-localproxy)
   (erc)
   )
+
+(provide 'erc-proxy)
+
+;;; erc-proxy.el ends here

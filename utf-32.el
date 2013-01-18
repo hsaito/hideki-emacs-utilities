@@ -1,3 +1,7 @@
+;;; utf-32.el --- UTF-32 Support for Emacs
+
+;;; Commentary:
+;; 
 ;; UTF-32 support for Emacs
 ;;
 ;; Original code by:
@@ -12,9 +16,7 @@
 ;; (require 'utf-32)
 ;;
 
-;;
-;; With BOM
-;;
+;;; Code:
 
 (defun utf-32-be-unix-pre-write-conversion (from to)
   (set-buffer-multibyte t)
@@ -408,4 +410,7 @@
   :pre-write-conversion 'utf-32le-unix-pre-write-conversion
   :post-read-conversion 'utf-32le-unix-post-read-conversion)
 
+
 (provide 'utf-32)
+
+;;; utf-32.el ends here

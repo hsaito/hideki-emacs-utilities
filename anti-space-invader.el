@@ -1,9 +1,10 @@
-;; Anti-Space-Invader
-;; by Hideki Saito (hidekis@gmail.com)
-;;
+;;; anti-space-invader.el --- Anti-Space Invader
+
+;;; Commentary:
+;; 
 ;; Summary: Eradicates two spaces after period into single space
 ;;
-;; Background: 
+;; Background:
 ;; Either one-space after period and single space after period are correct in sentence spacing.
 ;; This script will make a life easier for those using single space when they come across documents prepared using two-spaces.
 ;; 
@@ -20,7 +21,7 @@
 ;; (require 'anti-space-invader)
 ;;
 
-(provide 'anti-space-invader)
+;;; Code:
 
 (defun anti-space-invader()
   "Eradicate two spaces after period and replace with single space."
@@ -31,3 +32,7 @@
   ;; Return to the top of the buffer
   (beginning-of-buffer)
   )
+
+(provide 'anti-space-invader)
+
+;;; anti-space-invader.el ends here

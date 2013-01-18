@@ -1,9 +1,10 @@
-;; Create Random Buffer
-;; by Hideki Saito (hidekis@gmail.com)
-;;
+;;; create-random-buffer.el --- Create Random Buffer
+
+;;; Commentary:
+;; 
 ;; Summary: Creates an empty buffer with random numbered name.
 ;;
-;; Background: 
+;; Background:
 ;; Just wanted to make extra "scratch" buffer.
 ;; 
 ;; Limitations:
@@ -17,10 +18,10 @@
 ;; (require 'create-random-buffer)
 ;;
 
-(provide 'create-random-buffer)
+;;; Code:
 
 (defun create-random-buffer ()
-  "Creates an empty buffer with random name."
+  "Create an empty buffer with random name."
   (interactive)
   (switch-to-buffer (concat "*temp-" (concat (sha1 (number-to-string (random))) "*")))
   )
@@ -28,7 +29,11 @@
 (setq random-tempfile-default-directory "~/")
 
 (defun create-random-tempfile ()
-  "Creates temporary txt file of random name."
+  "Create temporary txt file of random name."
   (interactive)
   (find-file (concat random-tempfile-default-directory (concat "temp-" (sha1 (number-to-string(random))) ".txt")))
   )
+
+(provide 'create-random-buffer)
+
+;;; create-random-buffer.el ends here

@@ -1,10 +1,11 @@
-;; Script sanitizing script
-;; by Hideki Saito
-;;
+;;; sanitize.el --- Text Sanitizing Script
+
+;;; Commentary:
+;; 
 ;; Summary: A simple script that sanitizes text
 ;;
-;; Background: Certain CMS system I use causes encoding issue 
-;; when certain character, which would appear when original 
+;; Background: Certain CMS system I use causes encoding issue
+;; when certain character, which would appear when original
 ;; texts are prepared using word processor softwares.
 ;; This script removes those texts with acceptable ones.
 ;;
@@ -15,7 +16,7 @@
 ;; (require 'sanitize)
 ;;
 
-(provide 'sanitize)
+;;; Code:
 
 (defun sanitize-buffer ()
   "Sanitize buffer for certain proprietary CMS system."
@@ -41,3 +42,7 @@
   ;; Return to the top of the buffer
   (beginning-of-buffer)
   )
+
+(provide 'sanitize)
+
+;;; sanitize.el ends here
