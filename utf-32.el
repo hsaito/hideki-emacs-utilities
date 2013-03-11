@@ -308,7 +308,7 @@
   "UTF-32 (big endian)"
   :coding-type 'utf-16
   :mnemonic ?U
-  :eol-type 'unix
+  :eol-type 'dos
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32-be-dos-pre-write-conversion
   :post-read-conversion 'utf-32-be-dos-post-read-conversion)
@@ -317,7 +317,7 @@
   "UTF-32 (big endian)"
   :coding-type 'utf-16
   :mnemonic ?U
-  :eol-type 'mac
+  :eol-type 'unix ;; temporary fix
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32-be-unix-pre-write-conversion
   :post-read-conversion 'utf-32-be-unix-post-read-conversion)
@@ -337,7 +337,7 @@
   :coding-type 'utf-16
   :endian 'little
   :mnemonic ?U
-  :eol-type 'unix
+  :eol-type 'dos
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32-le-dos-pre-write-conversion
   :post-read-conversion 'utf-32-le-dos-post-read-conversion)
@@ -347,7 +347,7 @@
   :coding-type 'utf-16
   :endian 'little
   :mnemonic ?U
-  :eol-type 'mac
+  :eol-type 'unix ;; temporary fix
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32-le-unix-pre-write-conversion
   :post-read-conversion 'utf-32-le-unix-post-read-conversion)
@@ -367,7 +367,7 @@
   "UTF-32 (big endian)"
   :coding-type 'utf-16
   :mnemonic ?U
-  :eol-type 'unix
+  :eol-type 'dos
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32be-dos-pre-write-conversion
   :post-read-conversion 'utf-32be-dos-post-read-conversion)
@@ -376,7 +376,7 @@
   "UTF-32 (big endian)"
   :coding-type 'utf-16
   :mnemonic ?U
-  :eol-type 'mac
+  :eol-type 'unix ;; temporary fix
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32be-unix-pre-write-conversion
   :post-read-conversion 'utf-32be-unix-post-read-conversion)
@@ -396,7 +396,7 @@
   :coding-type 'utf-16
   :endian 'little
   :mnemonic ?U
-  :eol-type 'unix
+  :eol-type 'dos
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32le-dos-pre-write-conversion
   :post-read-conversion 'utf-32le-dos-post-read-conversion)
@@ -406,7 +406,7 @@
   :coding-type 'utf-16
   :endian 'little
   :mnemonic ?U
-  :eol-type 'mac
+  :eol-type 'unix ;; temporary fix
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32le-unix-pre-write-conversion
   :post-read-conversion 'utf-32le-unix-post-read-conversion)
