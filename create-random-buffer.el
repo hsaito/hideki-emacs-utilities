@@ -1,3 +1,4 @@
+;; -*- coding: utf-8-unix; -*-
 ;;; create-random-buffer.el --- Create Random Buffer
 
 ;;; Commentary:

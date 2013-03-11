@@ -1,3 +1,4 @@
+;; -*- coding: utf-8-unix; -*-
 ;;; sanitize.el --- Text Sanitizing Script
 
 ;;; Commentary:

@@ -1,3 +1,4 @@
+;; -*- coding: utf-8-unix -*-
 ;;; org-mode-aux.el --- Org Auxiliary Functions
 
 ;;; Commentary:

@@ -1,3 +1,4 @@
+;; -*- coding: utf-8-unix; -*-
 ;;; utf-32.el --- UTF-32 Support for Emacs
 
 ;;; Commentary:

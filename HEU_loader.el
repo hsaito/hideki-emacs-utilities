@@ -1,4 +1,4 @@
-;; -*- coding: utf-8 -*-
+;; -*- coding: utf-8-unix -*-
 ;;
 ;; Loads up Hideki's Emacs Utilities
 ;;
