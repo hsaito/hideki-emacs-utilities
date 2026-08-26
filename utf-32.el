@@ -122,6 +122,17 @@ EOL-TYPE is symbol 'unix or 'dos (Provisionally use unix for Mac)"
 ;; Common primitives for reading (post-read)
 ;; ------------------------------------------------------------
 
+(defun utf-32--safe-insert-codepoint (cp)
+  "Insert CP as an Emacs character safely."
+  (cond
+   ;; Valid Unicode range
+   ((<= cp #x10FFFF)
+    (insert (char-to-string cp)))
+   ;; Surrogate or invalid → replace with U+FFFD
+   (t
+    (insert (char-to-string #xFFFD)))))
+
+
 (defun utf-32--post-read-conversion (len endian bom eol-type)
   "Convert current buffer (unibyte UTF-32 bytes) to multibyte text.
 
@@ -131,7 +142,8 @@ BOM is non-nil if BOM should be stripped.
 EOL-TYPE is 'unix or 'dos."
   (save-excursion
     (goto-char (point-min))
-    (let* ((raw (buffer-substring (point-min) (point-max)))
+    (let* ((raw (string-make-unibyte
+		 (buffer-substring-no-properties (point-min) (point-max))))
 	   (raw-len (length raw))
 	   (idx 0)
 	   (out (get-buffer-create " *utf-32-temp*")))
@@ -168,8 +180,8 @@ EOL-TYPE is 'unix or 'dos."
 	      (insert "\n")))
 	   (t
 	    (with-current-buffer out
-	      (insert (char-to-string cp))))))
-        )
+	      (utf-32--safe-insert-codepoint cp)))))
+	)
       ;; Replace the buffer
       (erase-buffer)
       (set-buffer-multibyte t)
