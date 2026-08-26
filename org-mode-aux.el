@@ -1,4 +1,4 @@
-;; -*- coding: utf-8-unix -*-
+;; -*- coding: utf-8-unix; lexical-binding: t; -*-
 ;;; org-mode-aux.el --- Org Auxiliary Functions
 
 ;;; Commentary:

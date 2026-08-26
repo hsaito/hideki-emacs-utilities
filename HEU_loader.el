@@ -1,4 +1,4 @@
-;; -*- coding: utf-8-unix -*-
+;; -*- coding: utf-8-unix; lexical-binding: t; -*-
 ;;
 ;; Loads up Hideki's Emacs Utilities
 ;;

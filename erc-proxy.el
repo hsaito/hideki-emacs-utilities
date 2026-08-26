@@ -1,4 +1,4 @@
-;; -*- coding: utf-8-unix; -*-
+;; -*- coding: utf-8-unix; lexical-binding: t; -*-
 ;;; erc-proxy.el --- Scripts for setting up connection to IRC through proxy using ERC
 
 ;;; Commentary:
