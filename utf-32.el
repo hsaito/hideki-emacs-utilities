@@ -1,5 +1,5 @@
-;; -*- coding: utf-8-unix; -*-
-;;; utf-32.el --- UTF-32 coding systems for Emacs
+;; -*- coding: utf-8-unix; lexical-binding: t; -*-
+;;; utf-32.el --- UTF-32 Support for Emacs
 
 ;;; Commentary:
 ;; UTF-32 support for Emacs using binary coding-type and explicit
@@ -383,10 +383,6 @@ EOL-TYPE is 'unix or 'dos."
   :charset-list '(unicode)
   :pre-write-conversion 'utf-32le-mac-pre-write-conversion
   :post-read-conversion 'utf-32le-mac-post-read-conversion)
-
-(provide 'utf-32)
-
-;;; utf-32.el ends here
 
 (provide 'utf-32)
 

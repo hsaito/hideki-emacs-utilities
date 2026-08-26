@@ -1,4 +1,4 @@
-;; -*- coding: utf-8-unix; -*-
+;; -*- coding: utf-8-unix; lexical-binding: t; -*-
 ;;; uuid.el --- UUID Generation Script (multi-version)
 ;;; Written by Hideki Saito
 
